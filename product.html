@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="Ikoner/css/fontawesome.css" rel="stylesheet"/>
+    <link href="Ikoner/css/brands.css" rel="stylesheet"/>
+    <link href="Ikoner/css/solid.css" rel="stylesheet"/>
+    <link href="Ikoner/css/regular.css" rel="stylesheet"/>
+    
+</head>
+<body>
+    <header>
+     
+        <form action="search.html" method="get" class="search-bar">
+            <label for="search-input" class="visually-hidden"></label>
+            <input type="text" id="search-input" name="query" placeholder="søk her">
+            <button type="submit" aria-label="Søk"><i class="fa fa-search"></i></button>
+        </form>
+    
+        <!-- Navigasjonsmeny -->
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="#produkter">Produkter</a></li>
+            <li><a href="index.html" class="Logo">LOGO</i></a></li>
+            <li><a href="#kategorier">Kategorier</a></li>
+            <li><a href="#kontakt">Kontakt oss</a></li>
+        </ul>
+    
+       
+    
+        <!-- Ikoner som vanlige lenker -->
+        <section class="user-icons">
+            <a href="#" aria-label="Profil"><i class="fa fa-user"></i></a>
+            <a href="#" aria-label="Ønskeliste"><i class="fa fa-heart"></i></a>
+            <a href="checkout.html" aria-label="Handlekurv"><i class="fa fa-shopping-cart"></i></a>
+        </section>
+    </header>
+
+
+    <main>       
+        <!--Brødsmulesti-->
+        <section>
+            <!--Ferdigstille lenkingaga -->
+        <ul class="breadcrumb">
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="index.html#kategorier">Kategori</a></li>
+            <li><a href="">Produktside</a></li>
+          </ul>
+        </section>
+
+        <article>
+        <!--Hoveproduktområde-->
+            <section>
+                <figure>
+                    <img src="" alt="Hovedproduktbilde">
+                    <figcaption>Hovedproduktbilde</figcaption>
+                </figure>
+                
+                <!-- Mindre bildene -->
+                <figure>
+                    <img src="" alt="Mindre bilde 1">
+                </figure>
+                <figure>
+                    <img src="" alt="Mindre bilde 2">
+                </figure>
+                <figure>
+                    <img src="" alt="Mindre bilde 3">
+                </figure>
+            </section>
+            <section>
+                <header>
+                    <h1>Produktnavn</h1>
+                    <p><a href="#">Merkenavn</a></p>
+                </header>
+                <p>Pris: 5 195 kr inkl. mva.</p>
+                <p>Farge: <span>Beige</span></p>
+
+           
+                <label for="størrelse">Størrelse:</label>
+                <select id="størrelse" name="størrelse">
+                    <option>Velg størrelse</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+
+                    <button type="button">Legg i handlekurv</button>
+                    <button type="button"><i class="fa-regular fa-heart"></i></button>
+            </section>
+
+            <section class="product-details">
+                <details>
+                    <summary>Materiale og vedlikehold<i class="fa-solid fa-plus"></i></summary>
+                    <ul>
+                        <li>Overmateriale: 95% viskose 5% elastan </li>
+                        <li>Materiale ermer: 100% polyester</li>
+                        <li>Materiale: Jersey </li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>Produktdetaljer<i class="fa-solid fa-plus"></i></summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed deleniti assumenda beatae dolorem temporibus maxime eos, quod eum neque? Quas distinctio dolores saepe est, ea culpa autem adipisci quis architecto?</p>
+                </details>
+                <details>
+                    <summary>Størrelsestabell<i class="fa-solid fa-plus"></i></summary>
+                        <table>
+                        <thead>
+                            <tr>
+                                <th>EU</th>
+                                <th>INT</th>
+                                <th>Brystvidde (cm)</th>
+                                <th>Livvidde (cm)</th>
+                                <th>Hoftevidde (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>36</td>
+                                <td>S</td>
+                                <td>84-88</td>
+                                <td>68-72</td>
+                                <td>92-96</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>M</td>
+                                <td>88-92</td>
+                                <td>72-76</td>
+                                <td>96-100</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>L</td>
+                                <td>92-96</td>
+                                <td>76-80</td>
+                                <td>100-104</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>XL</td>
+                                <td>96-100</td>
+                                <td>80-84</td>
+                                <td>104-108</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </details>
+
+                <section class="reviews">
+                    <details>
+                        <summary> Anmeldelser<span class="rating" aria-label="Vurdering: 4 av 5 stjerner">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span class="review-count">(32)</span>
+                            </span>
+                        </summary>
+                
+                        <section>
+                            <header>Rober Labrador</header>
+                            <p><time datetime="2024-10-02">2024-10-02</time></p>
+                            <p class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore rerum ipsam magni iure rem necessitatibus hic autem quod, fuga provident impedit numquam a maxime repudiandae ipsa animi, eos harum..</p>
+                        </section>
+                    </details>
+                </section>
+                
+        </article>
+
+    </main>
+
+    <aside aria-label="Relaterte produkter">
+        <h2>Lignende produkter</h2>
+
+        <nav aria-label="Brødsmulesti">  
+            <a href="#">Se flere lignende produkter</a><i class="fa-solid fa-arrow-right"></i></li>
+        </nav>
+
+        <!--  produktkort 1 -->
+        <article>
+            <figure>
+                <img src="" alt="Relatert produkt 1">
+                <figcaption>Productname</figcaption>
+            </figure>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="#">842 Rewiews</span>
+            <p>Pris: 299 kr</p>
+        </article>
+
+        <!--  produktkort 2 -->
+        <article>
+            <figure>
+                <img src="" alt="Relatert produkt 2">
+                <figcaption>Productname</figcaption>
+            </figure>
+            <p>Pris: 399 kr</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span class="#">842 Rewiews</span>
+        </article>
+
+        <!--  produktkort 3 -->
+        <article>
+            <figure>
+                <img src="" alt="Relatert produkt 3">
+                <figcaption>Productname</figcaption>
+            </figure>
+            <p>Pris: 499 kr</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span class="#">842 Rewiews</span>
+
+        </article>
+
+        <!-- produktkort 4 -->
+        <article>
+            <figure>
+                <img src="" alt="Relatert produkt 4">
+                <figcaption>Productname</figcaption>
+            </figure>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span class="#">842 Rewiews</span>
+            <p>Pris: 599 kr</p>
+        </article>
+    </aside>
+
+
+   
+
+    <footer id="kontakt">
+        <section>
+            <img src="#" alt="Logo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit ipsum velit perspiciatis iste excepturi quos optio quae quam aspernatur. Et nostrum iusto quasi nihil, ad id. Rem, labore voluptatibus!</p>
+        </section>
+
+        <section>
+            <h3>Kontakt</h3>
+            <p>Adresse: B R A veien 4, 1757 Halden</p>
+            <p>Telefon: 69 60 80  00 </p>
+            <p>E.-post: halden@hiof.no</p>
+            <p>Åpningstider: Stenger 15:00 </p>
+        </section>
+
+        <nav>
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="index.html#produkter">Produkter</a></li>
+                <li><a href="index.html#kategorier">Kategorier</a></li>
+                <li><a href="#">Kontakt Oss</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h3>Sosiale medier</h3>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://no.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+
+        </section>
+
+    </footer>
+
+    
+</body>
+</html>
