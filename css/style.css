@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+}
+
+
+body{
+    font-family:   Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/*Header*/
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+/*SøkeBar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid; 
+    border-radius: 25px; 
+    width: 12rem; 
+    margin: 1.5rem;
+}
+.search-bar input[type="text"] {
+    border: none; 
+    font-size: 14px;
+    padding: 5px;
+    background-color: transparent;
+}
+.search-bar button {
+    border: none; 
+    font-size: 12px;
+}
+/*Navigasjonsliste */
+ul li a {
+   
+    color:black;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    text-align: center;
+    
+}
+
+ul li{
+    margin: 10px;
+}
+
+.Logo{
+    font-weight: bold;
+    font-size: 28px;
+}
+/*Logo */
+::before {
+    color: black;
+}
+
+/*Header Slutt*/
+
+
+
+
+
+
+/* Våre mest populære produkter  seksjon */
+.kategorier-forside {
+    display: flex;
+    gap: 2px;
+}
+
+ul.kategorier-forside li {
+    margin: 4px;
+    padding: 0;
+}
+
+.kategorier-forside button {
+    border-radius: 25px;
+    font-size: 18px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border-width: 1px;
+}
+
+.black-btn button {
+    color: white;
+    background-color: black;
+}
+
+.header-produkter {
+    margin: 20px;
+    text-align: center;
+}
+
+/* Produktkort seksjonen */
+#product-card {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    padding: 20px;
+    margin: 0 2.5rem;
+}
+
+/* Standard layout  */
+#product-card article {
+    flex: 1 1 100%; 
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative; 
+   
+}
+
+
+
+/*https://www.w3schools.com/howto/howto_css_zoom_hover.asp*/
+#product-card article:hover {
+    transform: scale(1.05); 
+}
+
+#product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hjerteikonet */
+#product-card .favorite-icon {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    font-size: 24px; 
+    background-color: white; 
+    padding: 5px; 
+    border-radius: 50%; 
+    transition: transform 0.3s ease; 
+}
+
+#product-card .favorite-icon:hover {
+    transform: scale(1.2); 
+    
+}
+
+/* Produktdetaljer */
+.produkt-detaljer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 25px; 
+}
+
+.produkt-detaljer h3  {
+    font-size: 16px;
+    margin: 0;
+    
+}
+
+.produkt-detaljer h3 a{
+    text-decoration: none;
+    color: black;
+}
+
+.produkt-detaljer .price {
+    font-size: 15px;
+    color: #000000;
+    margin: 0;
+}
+
+/* Rating-raden */
+.rating {
+    display: flex;
+    justify-content: left; 
+    align-items: center; 
+    font-size: 15px;
+    
+}
+
+.rating span {
+    color: #000000; 
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Resposivitet*/
+
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_wrap*/
+
+/* iPad */
+@media (min-width: 768px) {
+    #product-card article {
+        flex: 1 1 48%; 
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #product-card article {
+        flex: 1 1 28%; 
+    }
+}
