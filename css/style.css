@@ -69,6 +69,21 @@ ul li{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Våre mest populære produkter  seksjon */
 .kategorier-forside {
     display: flex;
@@ -183,7 +198,6 @@ ul.kategorier-forside li {
     justify-content: left; 
     align-items: center; 
     font-size: 15px;
-    
 }
 
 .rating span {
@@ -193,6 +207,67 @@ ul.kategorier-forside li {
     
 }
 
+/*Våre mest populære produkter slutt*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Våre mest populære kategorier sekjson*/
+#kategori {
+    padding: 1rem 5rem; /
+}
+
+/* Headeren */
+#kategori header {
+    text-align: center;
+    margin: 5rem; 
+}
+
+
+
+
+.kategorigrid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem; 
+}
+
+
+
+.kategori {
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    overflow: hidden;
+    height: 300px; 
+
+}
+
+.kategori img {
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 15px; 
+}
+
+
+.kategori h3 {
+    position: relative; 
+    color: #fff; 
+    border-radius: 15px; 
+}
 
 
 
@@ -217,6 +292,10 @@ ul.kategorier-forside li {
 
 /*Resposivitet*/
 
+
+
+
+/*Våre mest populære produkter*/
 /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_wrap*/
 
 /* iPad */
@@ -232,3 +311,28 @@ ul.kategorier-forside li {
         flex: 1 1 28%; 
     }
 }
+
+
+
+
+
+
+
+/*Kategori seksjonen*/
+/* Mobile */
+.kategorigrid {
+    grid-template-columns: 1fr;
+}
+
+/* iPad */
+@media (min-width: 768px) {
+    .kategorigrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+    }
+}
+
+/* Desktop */
+
+
+
