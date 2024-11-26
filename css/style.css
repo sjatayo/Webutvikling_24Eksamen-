@@ -2,12 +2,19 @@
     box-sizing: border-box;
     margin: 0; 
     padding: 0; 
+    
+    
 }
 
 
 body{
     font-family:   Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 2rem;
+  
+    
 }
 
 /*Header*/
@@ -69,6 +76,89 @@ ul li{
 
 
 
+/*Footer*/
+footer {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem;
+    padding: 1rem 5rem; 
+    border-top: 1px solid #8d8d8d;
+}
+
+/* Logo-seksjonen */
+ header.logo-section {
+    flex-basis: 100%; 
+    text-align: left;
+    margin-bottom: 1rem; 
+}
+
+
+
+a.logo {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Seksjonene i footer */
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem;
+    padding: 2rem 0; 
+    border-top: 1px solid #8d8d8d;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .logo-section {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .logo-section .logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+footer section,
+footer nav {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    
+    font-size: 0.9rem;
+}
 
 
 
@@ -82,7 +172,13 @@ ul li{
 
 
 
+/*Footer Slutt*/
 
+
+
+
+
+/*Index hmtl Siden ////////////////////////////////////////////*/
 
 /* Våre mest populære produkter  seksjon */
 .kategorier-forside {
@@ -92,7 +188,7 @@ ul li{
 
 ul.kategorier-forside li {
     margin: 4px;
-    padding: 0;
+   
 }
 
 .kategorier-forside button {
@@ -222,23 +318,14 @@ ul.kategorier-forside li {
 
 
 /*Våre mest populære kategorier sekjson*/
-#kategori {
-    padding: 1rem 5rem; /
+#kategori{
+    padding: 2rem 0;
 }
-
-/* Headeren */
-#kategori header {
-    text-align: center;
-    margin: 5rem; 
-}
-
-
-
 
 .kategorigrid {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 1.5rem; 
+    gap: 1rem; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 
@@ -248,26 +335,174 @@ ul.kategorier-forside li {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    text-align: center; 
     overflow: hidden;
-    height: 300px; 
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    align-self: stretch;
+    justify-self: stretch;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.kategori:hover {
+    transform: scale(1.02);
+    
+}
+
+.kategori::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background 0.3s ease;
+}
+
+.kategori:hover::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.kategori h3 {
+    position: absolute; 
+    color: #fff; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1;
+    
 }
 
 .kategori img {
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    border-radius: 15px; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 
-.kategori h3 {
-    position: relative; 
-    color: #fff; 
-    border-radius: 15px; 
+/*Kategori Slutt*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Anmeldelser Start*/
+
+aside {
+    padding: 1rem 5rem;
 }
+
+.overskrift-anmeldelser{
+  
+  padding: 1rem;
+}
+
+
+#anmeldelser {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 10px 0;
+}
+
+
+
+
+#anmeldelser header h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+#anmeldelser header p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+
+
+
+
+#anmeldelser article {
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    gap: 16px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+#anmeldelser article img {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    object-fit: cover;
+   
+}
+
+#anmeldelser article h3 {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #333;
+}
+
+#anmeldelser article ul.rating {
+    display: flex;
+    list-style: none;
+   justify-content: left;
+   font-size: 15px;
+}
+
+
+#anmeldelser article p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/*Anmeldelser Slutt */
+
+
+
+
+
+
+
+/*Checkhout siden Starter Her  /////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -291,6 +526,24 @@ ul.kategorier-forside li {
 
 
 /*Resposivitet*/
+
+
+/*Footer*/
+
+@media (min-width: 768px) {
+    footer {
+        justify-content: space-between; 
+    }
+
+    footer section,
+    footer nav {
+        flex: 1; 
+        min-width: 200px;
+    }
+
+    
+}
+
 
 
 
@@ -321,18 +574,53 @@ ul.kategorier-forside li {
 /*Kategori seksjonen*/
 /* Mobile */
 .kategorigrid {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
+
+.kategori1, .kategori2, .kategori3, .kategori4, .kategori5 {
+    grid-area: unset;
+}
+
 
 /* iPad */
 @media (min-width: 768px) {
     .kategorigrid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "kategori1 kategori2"
+            "kategori3 kategori3"
+            "kategori4 kategori5";
     }
+
+    .kategori1 { grid-area: kategori1; }
+    .kategori2 { grid-area: kategori2; }
+    .kategori3 { grid-area: kategori3; }
+    .kategori4 { grid-area: kategori4; }
+    .kategori5 { grid-area: kategori5; }
 }
 
-/* Desktop */
 
+/* Desktop */
+@media (min-width: 1024px) {
+    .kategorigrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "kategori1 kategori2 kategori3"
+            "kategori5 kategori5 kategori3"
+            "kategori5 kategori5 kategori4";
+        gap: 2rem;
+    }
+
+    .kategori1 { grid-area: kategori1; }
+    .kategori2 { grid-area: kategori2; }
+    .kategori3 { grid-area: kategori3; }
+    .kategori4 { grid-area: kategori4; }
+    .kategori5 { grid-area: kategori5; }
+}
 
 
