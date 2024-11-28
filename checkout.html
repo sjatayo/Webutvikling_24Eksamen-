@@ -21,7 +21,7 @@
         <ul>
             <li><a href="index.html">Hjem</a></li>
             <li><a href="#produkter">Produkter</a></li>
-            <li><a href="index.html" class="Logo">LOGO</i></a></li>
+            <li><a href="index.html" class="Logo">LOGO</a></li>
             <li><a href="#kategorier">Kategorier</a></li>
             <li><a href="#kontakt">Kontakt oss</a></li>
         </ul>
@@ -38,21 +38,23 @@
 
     <main>
 
+        <section class="ch">
         <nav>
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i>Se flere lignende produkter</a>
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i>Fortsett å handle</a>
         </nav>
         <h1>Kasse</h1>
-        <!--Produktkort-->
+        </section>
 
         <section class="shopping-item">
             <h2>1.SHOPPINGBAGGEN DIN</h2>
-
+        
         <article>
             <figure>
                 <img src="Pictures/istockphoto-643071026-1024x1024.jpg" alt="Produktbilde av kjole">
             
             </figure>
             <section>
+          
                 <h4>PRODUCT NAME</h4>
                 <p>Kr 1999</p>
                 <p>Farge: beige</p>
@@ -69,8 +71,9 @@
                 <label for="quantity">Antall</label>
                 <input type="number" id="quantity" name="quantity" value="1" min="1">
             </form>
-            <button title="Lagre som favoritt"><i class="fa-regular fa-heart"></i></button>
-            <button title="Fjern fra handlekurven"><i class="fa-solid fa-trash"></i></button>
+      
+            <button title="Lagre som favoritt" ><i class="fa-regular fa-heart"></i></button>
+            <button title="Fjern fra handlekurven" ><i class="fa-solid fa-trash"></i></button>
         </article>
 
 
@@ -129,9 +132,6 @@
             <button title="Lagre som favoritt"><i class="fa-regular fa-heart"></i></button>
             <button title="Fjern fra handlekurven"><i class="fa-solid fa-trash"></i></button>
         </article>
-
-
-
         </section>
 
         <!--Dine Opplysninger -->
@@ -215,47 +215,53 @@
 
             
        
-
-        <section>
-            <h2>Betaling</h2>
-            
-         
-            <p>Beløp å betale: 1499 kr</p>
-
-            <!-- Betalingsskjema -->
+        <section class="betaling">
+            <h2>4. Betaling</h2>
+        
+            <p><strong>Betal med kort</strong> <i class="fa-solid fa-credit-card"></i></p>
+        
             <form>
-                
-                <label for="kortnummer">Kortnummer:</label>
-                <input type="text" id="kortnummer" name="kortnummer" placeholder="1234 5678 9012 3456" required>
+                <label for="kortnummer">
+                    Kortnummer 
+                </label>
+                <input type="text" id="kortnummer" name="kortnummer" placeholder="342342 **** 4435" required>
+        
+                <label for="utløpsdato">
+                    Utløpsdato
+                </label>
 
-                
-                <label for="utløpsdato">Utløpsdato:</label>
-                <input type="text" id="utløpsdato" name="utløpsdato" placeholder="MM/ÅÅ" required>
-
-                
-                <label for="cvc">CVC/CVV:</label>
-                <input type="text" id="cvc" name="cvc" placeholder="123" required>
-
-                <p>Å betale inkl. mva</p>
-                <p>1 199</p>
-                
-                <button type="submit">Fullfør Kjøp</button>
-
-                
+                <section class="ikon">
+                    <input type="text" id="utløpsdato" name="utløpsdato" placeholder="mm/dd/yyyy" required>
+                    <i class="fa-regular fa-calendar"></i>
+                </section>
+        
+                <label for="cvc">
+                    CVC/CVV
+                </label>
+                <input type="text" id="cvc" name="cvc" placeholder="CVC/CVV" required>
+        
+               
+                <section class="amount-due">
+                    <p>Å betale inkl. mva</p>
+                    <p>1 199 kr</p>
+                </section>
+        
+                <button type="submit">Fullfør kjøp</button>
+        
                 <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
-
-                
+        
                 <label>
                     <input type="checkbox" name="vilkår" required>
                     Ja, jeg godtar vilkårene
                 </label>
-
+        
                 <label>
                     <input type="checkbox" name="nyhetsbrev">
                     Ja takk! Send nyhetsbrev til meg
                 </label>
             </form>
         </section>
+        
 
 
     </main>
