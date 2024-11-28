@@ -4,12 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="Ikoner/css/fontawesome.css" rel="stylesheet"/>
-    <link href="Ikoner/css/brands.css" rel="stylesheet"/>
-    <link href="Ikoner/css/solid.css" rel="stylesheet"/>
-    <link href="Ikoner/css/regular.css" rel="stylesheet"/>
+    <link href="Ikoner/css/fontawesome.css" rel="stylesheet">
+    <link href="Ikoner/css/brands.css" rel="stylesheet">
+    <link href="Ikoner/css/solid.css" rel="stylesheet">
+    <link href="Ikoner/css/regular.css" rel="stylesheet">
 <body>
-    <header>
+    <header class="site-header">
   
         <form action="search.html" method="get" class="search-bar">
             <label for="search-input" class="visually-hidden"></label>
@@ -68,8 +68,8 @@
                     <option value="L">L</option>
                 </select>
                 
-                <label for="quantity">Antall</label>
-                <input type="number" id="quantity" name="quantity" value="1" min="1">
+                <label for="quantity1">Antall</label>
+                <input type="number" id="quantity1" name="quantity" value="1" min="1">
             </form>
       
             <button title="Lagre som favoritt" ><i class="fa-regular fa-heart"></i></button>
@@ -92,14 +92,14 @@
          
             <form>
                 <label for="size">Størrelse</label>
-                <select id="size" name="size">
+                <select id="size1" name="size">
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
                 </select>
                 
-                <label for="quantity">Antall</label>
-                <input type="number" id="quantity" name="quantity" value="1" min="1">
+                <label for="quantity2">Antall</label>
+                <input type="number" id="quantity2" name="quantity" value="1" min="1">
             </form>
             <button title="Lagre som favoritt"><i class="fa-regular fa-heart"></i></button>
             <button title="Fjern fra handlekurven"><i class="fa-solid fa-trash"></i></button>
@@ -120,14 +120,14 @@
          
             <form>
                 <label for="size">Størrelse</label>
-                <select id="size" name="size">
+                <select id="size2" name="size">
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
                 </select>
                 
-                <label for="quantity">Antall</label>
-                <input type="number" id="quantity" name="quantity" value="1" min="1">
+                <label for="quantity3">Antall</label>
+                <input type="number" id="quantity3" name="quantity" value="1" min="1">
             </form>
             <button title="Lagre som favoritt"><i class="fa-regular fa-heart"></i></button>
             <button title="Fjern fra handlekurven"><i class="fa-solid fa-trash"></i></button>
@@ -140,40 +140,36 @@
             <form action="#" method="post">
               
                 <h3>Leveringsadresse</h3>
+        
                 <label for="fornavn">Fornavn:</label>
                 <input type="text" id="fornavn" name="fornavn" required>
         
-          
                 <label for="etternavn">Etternavn:</label>
                 <input type="text" id="etternavn" name="etternavn" required>
         
-         
                 <label for="gateadresse">Gateadresse:</label>
                 <input type="text" id="gateadresse" name="gateadresse" required>
         
-           
-                <label for="postnummer">Postnummer:</label>
-                <input type="number" id="postnummer" name="postnummer" required>
+                <label for="postnummer1">Postnummer:</label>
+                <input type="number" id="postnummer1" name="postnummer1" required>
         
-          
-                <label for="poststed">Poststed:</label>
-                <input type="text" id="poststed" name="poststed" required>
+                <label for="poststed1">Poststed:</label>
+                <input type="text" id="poststed1" name="poststed1" required>
         
-
-
-                <label for="postnummer">Kontaktinformasjon E-post </label>
-                <input type="number" id="postnummer" name="postnummer" required>
+                <label for="epost">Kontaktinformasjon E-post:</label>
+                <input type="email" id="epost" name="epost" required>
         
-          
-                <label for="poststed">Telefon</label>
-                <input type="text" id="poststed" name="poststed" required>
-              
+                <label for="telefon">Telefon:</label>
+                <input type="tel" id="telefon" name="telefon" required>
+        
                 <section class="do-buttons">
                     <button type="submit" class="save">Lagre</button>
                     <button type="reset" class="cancel">Avbryt</button>
                 </section>
             </form>
         </section>
+        
+        
 
         <!--Leveringsalternativer-->
      
@@ -189,9 +185,9 @@
                     Express Hjemlevering
                     <span>3-4 Virkedager</span>
                     <span>59 kr</span>
-                    <p>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
+                    Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.
                 </label>
-        
+
                 <label>
                     <input type="radio" name="delivery" id="express-pickup">
                     <i class="fa-solid fa-box"></i>
@@ -207,8 +203,10 @@
                     Standard Hjemlevering
                     <span>5-8 Virkedager</span>
                     <span>Gratis</span>
-                    <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                    Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.
                 </label>
+                   
+                
             </form>
         </section>
        

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Site</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="Ikoner/css/fontawesome.css" rel="stylesheet"/>
-    <link href="Ikoner/css/brands.css" rel="stylesheet"/>
-    <link href="Ikoner/css/solid.css" rel="stylesheet"/>
-    <link href="Ikoner/css/regular.css" rel="stylesheet"/>
+    <link href="Ikoner/css/fontawesome.css" rel="stylesheet">
+    <link href="Ikoner/css/brands.css" rel="stylesheet">
+    <link href="Ikoner/css/solid.css" rel="stylesheet">
+    <link href="Ikoner/css/regular.css" rel="stylesheet">
     
 </head>
 <body>
-    <header>
+    <header class="site-header">
      
         <form action="search.html" method="get" class="search-bar">
             <label for="search-input" class="visually-hidden"></label>
@@ -24,7 +24,7 @@
         <ul>
             <li><a href="index.html">Hjem</a></li>
             <li><a href="#produkter">Produkter</a></li>
-            <li><a href="index.html" class="Logo">LOGO</i></a></li>
+            <li><a href="index.html" class="Logo">LOGO</a></li>
             <li><a href="#kategorier">Kategorier</a></li>
             <li><a href="#kontakt">Kontakt oss</a></li>
         </ul>
@@ -51,48 +51,52 @@
           </ul>
         </section>
 
-        <article>
-        <!--Hoveproduktområde-->
-            <section>
-                <figure>
-                    <img src="" alt="Hovedproduktbilde">
-                    <figcaption>Hovedproduktbilde</figcaption>
-                </figure>
-                
-                <!-- Mindre bildene -->
-                <figure>
-                    <img src="" alt="Mindre bilde 1">
-                </figure>
-                <figure>
-                    <img src="" alt="Mindre bilde 2">
-                </figure>
-                <figure>
-                    <img src="" alt="Mindre bilde 3">
-                </figure>
-            </section>
-            <section>
-                <header>
-                    <h1>Produktnavn</h1>
-                    <p><a href="#">Merkenavn</a></p>
-                </header>
-                <p>Pris: 5 195 kr inkl. mva.</p>
-                <p>Farge: <span>Beige</span></p>
+        <div class="product-grid">
 
+            <div class="small-images">
+                <figure class="mindrebilde1">
+                    <img src="Pictures/istockphoto-643071026-1024x1024.jpg" alt="Mindre bilde 1">
+                </figure>
+                <figure class="mindrebilde2">
+                    <img src="Pictures/istockphoto-643071026-1024x1024.jpg" alt="Mindre bilde 2">
+                </figure>
+                <figure class="mindrebilde3">
+                    <img src="Pictures/istockphoto-643071026-1024x1024.jpg" alt="Mindre bilde 3">
+                </figure>
+            </div>
+
+            <figure class="hovedbilde">
+                <img src="Pictures/istockphoto-643071026-1024x1024.jpg" alt="Hovedproduktbilde">
+            </figure>
+        </div>
+        
+            
            
-                <label for="størrelse">Størrelse:</label>
-                <select id="størrelse" name="størrelse">
-                    <option>Velg størrelse</option>
-                    <option>XS</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
+            <header>
+                <h1>Produktnavn</h1>
+                <p><a href="#">Merkenavn</a></p>
+            </header>
+        
+            <p>Pris: 5 195 kr inkl. mva.</p>
+            <p>Farge: <span>Beige</span></p>
+
+        
+            <label for="størrelse"></label>
+            <select id="størrelse" name="størrelse">
+                <option>Velg størrelse</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
 
 
-                    <button type="button">Legg i handlekurv</button>
-                    <button type="button"><i class="fa-regular fa-heart"></i></button>
+            <section class="add-to-cart-buttons">
+                <button type="button">Legg i handlekurv</button>
+                <button type="button"><i class="fa-regular fa-heart"></i></button>
             </section>
+            
 
             <section class="product-details">
                 <details>
@@ -153,7 +157,7 @@
                     </table>
                     
                 </details>
-
+                </section>
                 <section class="reviews">
                     <details>
                         <summary> Anmeldelser<span class="rating" aria-label="Vurdering: 4 av 5 stjerner">
@@ -181,7 +185,7 @@
                     </details>
                 </section>
                 
-        </article>
+     
 
     </main>
 
@@ -189,71 +193,99 @@
         <h2>Lignende produkter</h2>
 
         <nav aria-label="Brødsmulesti">  
-            <a href="#">Se flere lignende produkter</a><i class="fa-solid fa-arrow-right"></i></li>
+            <a href="#">Se flere lignende produkter</a><i class="fa-solid fa-arrow-right"></i>
         </nav>
 
         <!--  produktkort 1 -->
         <article>
-            <figure>
-                <img src="" alt="Relatert produkt 1">
-                <figcaption>Productname</figcaption>
-            </figure>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <span class="#">842 Rewiews</span>
-            <p>Pris: 299 kr</p>
+            <section class="overskrift-anmeldelser">
+                <h2>Anmeldelser</h2>
+            </section>
         </article>
 
-        <!--  produktkort 2 -->
-        <article>
-            <figure>
-                <img src="" alt="Relatert produkt 2">
-                <figcaption>Productname</figcaption>
-            </figure>
-            <p>Pris: 399 kr</p>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span class="#">842 Rewiews</span>
-        </article>
 
-        <!--  produktkort 3 -->
-        <article>
-            <figure>
-                <img src="" alt="Relatert produkt 3">
-                <figcaption>Productname</figcaption>
-            </figure>
-            <p>Pris: 499 kr</p>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span class="#">842 Rewiews</span>
+            <section id="anmeldelser-pr">
+            <!-- Anmeldelser  -->
+            <article>
+                <figure class="image-container">
+                    <img src="Pictures/tennis-7968714_640.png" alt="Produktbilde">
+                    <i class="fa-regular fa-heart favorite-icon"></i>
+                </figure>
+                <section class="produkt-detaljer">
+                    <h3><a href="product.html">Product Name</a></h3>
+                    <p class="price">kr 1999</p>
+                </section>
+                <ul class="rating" aria-label="Vurdering: 4 av 5 stjerner">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><span class="review-count">842 Reviews</span></li>
+                </ul>
+            </article>
 
-        </article>
+            <article>
+                <figure class="image-container">
+                    <img src="Pictures/tennis-7968714_640.png" alt="Produktbilde">
+                    <i class="fa-regular fa-heart favorite-icon"></i>
+                </figure>
+                <section class="produkt-detaljer">
+                    <h3><a href="product.html">Product Name</a></h3>
+                    <p class="price">kr 1999</p>
+                </section>
+                <ul class="rating" aria-label="Vurdering: 4 av 5 stjerner">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><span class="review-count">842 Reviews</span></li>
+                </ul>
+            </article>
 
-        <!-- produktkort 4 -->
-        <article>
-            <figure>
-                <img src="" alt="Relatert produkt 4">
-                <figcaption>Productname</figcaption>
-            </figure>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span class="#">842 Rewiews</span>
-            <p>Pris: 599 kr</p>
-        </article>
+            <article>
+                <figure class="image-container">
+                    <img src="Pictures/tennis-7968714_640.png" alt="Produktbilde">
+                    <i class="fa-regular fa-heart favorite-icon"></i>
+                </figure>
+                <section class="produkt-detaljer">
+                    <h3><a href="product.html">Product Name</a></h3>
+                    <p class="price">kr 1999</p>
+                </section>
+                <ul class="rating" aria-label="Vurdering: 4 av 5 stjerner">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><span class="review-count">842 Reviews</span></li>
+                </ul>
+            </article>
+
+            <article>
+                <figure class="image-container">
+                    <img src="Pictures/tennis-7968714_640.png" alt="Produktbilde">
+                    <i class="fa-regular fa-heart favorite-icon"></i>
+                </figure>
+                <section class="produkt-detaljer">
+                    <h3><a href="product.html">Product Name</a></h3>
+                    <p class="price">kr 1999</p>
+                </section>
+                <ul class="rating" aria-label="Vurdering: 4 av 5 stjerner">
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li><span class="review-count">842 Reviews</span></li>
+                </ul>
+            </article>
+                                    
+            
+        </section>
+
     </aside>
-
 
    
     <footer>

@@ -10,15 +10,12 @@
 body{
     font-family:   Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
-    max-width: 1200px;
     margin: 0 auto; 
-    padding: 0 2rem;
-  
-    
+    padding: 0 0.5rem; 
 }
 
 /*Header*/
-header{
+header.site-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,10 +86,11 @@ footer {
 }
 
 /* Logo-seksjonen */
- header.logo-section {
+ .logo-section {
     flex-basis: 100%; 
     text-align: left;
     margin-bottom: 1rem; 
+    justify-content: center;
 }
 
 
@@ -154,19 +152,97 @@ footer nav ul li a {
     font-size: 0.9rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*Footer Slutt*/
+
+
+/* Slide Container */
+.slide-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slide */
+.slide {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        "image"
+        "content";
+}
+
+/* Image Wrapper */
+.slide-image-wrapper {
+    grid-area: image;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.8);
+}
+
+/* Slide Content */
+.slide-content {
+        position: absolute;
+        top: 40%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: right;
+     
+       
+}
+
+.slide-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+   
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+   
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -175,6 +251,11 @@ footer nav ul li a {
 /*Index hmtl Siden ////////////////////////////////////////////*/
 
 /* Våre mest populære produkter  seksjon */
+.header-produkter nav {
+    display: flex;
+    justify-content: center;
+}
+
 .kategorier-forside {
     display: flex;
     gap: 2px;
@@ -484,7 +565,7 @@ aside {
 
 .ch nav {
     align-self: flex-start; 
-    margin-left: -25px;
+    margin-left: -5px;
     padding-top: 1rem;
 }
 
@@ -650,11 +731,11 @@ button.cancel {
 }
 
 
-/*Dine opplysninger sekjsonen slutt */
+/*Dine opplysninger sekjsonen slutt ////////////////////////////////////////////////////*/
 
 
 
-
+/**/
 
 /* Styling for leveringsseksjonen */
 .deliverence {
@@ -833,6 +914,114 @@ button.cancel {
 
 
 
+/*Checkout side slutt///////////////////////////////////////////////////////*/
+
+
+
+
+/*Produktside start*/
+
+/*Bilder seksjonen*/
+.product-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr; 
+    grid-gap: 10px;
+    padding: 1rem;
+    
+    
+}
+
+.product-grid .small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-grid .small-images figure {
+    flex: 1;
+}
+
+/*https://www.w3schools.com/cssref/css_pr_aspect-ratio.php*/
+.product-grid .small-images img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    
+  
+}
+
+.product-grid .hovedbilde {
+    width: 100%;
+    aspect-ratio: 2 / 4; 
+    object-fit: cover;
+ 
+    
+}
+
+
+.product-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Bilder sekjsonen slutt  */
+
+
+
+
+
+
+/*Produkt detaljer */
+
+.product-details details {
+    border-top: 1px solid #1a1a1a;
+    padding: 0.6rem 0;
+}
+
+.product-details summary {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 0.5rem 0;
+}
+
+.product-details summary i {
+    margin-left: 0.5rem;
+}
+
+.product-details ul,
+.product-details p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.product-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.product-details th,
+.product-details td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.product-details thead th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+
+aside h2,
+aside nav {
+    text-align: left;
+}
 
 
 
@@ -840,6 +1029,102 @@ button.cancel {
 
 
 
+/*Anmeldelser*/
+
+#anmeldelser-pr {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    gap: 15px;
+    padding: 20px;
+    margin: 0 auto; 
+ 
+}
+
+
+#anmeldelser-pr article {
+    flex: 0 0 200px; 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    scroll-snap-align: start; 
+    position: relative;
+}
+
+
+#anmeldelser-pr .image-container {
+    width: 100%;
+    position: relative;
+}
+
+#anmeldelser-pr .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+#anmeldelser-pr .favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  
+}
+
+#anmeldelser-pr .favorite-icon:hover {
+    transform: scale(1.2);
+}
+
+
+#anmeldelser-pr .produkt-detaljer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
+}
+
+#anmeldelser-pr .produkt-detaljer h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+#anmeldelser-pr .produkt-detaljer h3 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+
+
+#anmeldelser-pr .produkt-detaljer .price {
+    font-size: 1rem;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Stjernerating */
+#anmeldelser-pr ul.rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+
+
+#anmeldelser-pr ul.rating span {
+    font-size: 0.8rem;
+   
+}
 
 
 
@@ -847,15 +1132,7 @@ button.cancel {
 
 
 
-
-
-
-
-
-
-
-
-
+/*Anmeldelser Slutt*/
 
 
 
@@ -866,7 +1143,27 @@ button.cancel {
 /*Resposivitet*/
 
 
+
+
+
+
+
 /*Footer*/
+
+
+@media (min-width: 768px) {
+    body{
+        font-family:   Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        max-width: 1200px;
+        margin: 0 auto; 
+        padding: 0 2rem;
+      
+        
+    }
+
+    
+}
 
 @media (min-width: 768px) {
     footer {
@@ -923,6 +1220,10 @@ button.cancel {
 
 
 /* iPad */
+
+
+
+
 @media (min-width: 768px) {
     .kategorigrid {
         grid-template-columns: repeat(2, 1fr);
