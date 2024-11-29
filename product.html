@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="site-header">
-     
+        
         <form action="search.html" method="get" class="search-bar">
             <label for="search-input" class="visually-hidden"></label>
             <input type="text" id="search-input" name="query" placeholder="søk her">
@@ -21,11 +21,11 @@
         </form>
     
         <!-- Navigasjonsmeny -->
-        <ul>
+        <ul class="nav-menu">
             <li><a href="index.html">Hjem</a></li>
-            <li><a href="index.html#produkter">Produkter</a></li>
+            <li><a href="#produkter">Produkter</a></li>
             <li><a href="index.html" class="Logo">LOGO</a></li>
-            <li><a href="index.html#kategori">Kategorier</a></li>
+            <li><a href="#kategori">Kategorier</a></li>
             <li><a href="#kontakt">Kontakt oss</a></li>
         </ul>
     
@@ -45,9 +45,9 @@
         <section>
             
         <ul class="breadcrumb">
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="index.html#kategorier">Kategori</a></li>
-            <li><a href="">Produktside</a></li>
+            <li><a href="index.html">Hjem<i class="fa-solid fa-arrow-right-long"></i></a></li>
+            <li><a href="index.html#kategori">Kategori<i class="fa-solid fa-arrow-right-long"></i></a></li>
+            <li><a href="">Produktside<i class="fa-solid fa-arrow-right-long"></i></a></li>
           </ul>
         </section>
 
@@ -77,8 +77,10 @@
                 <p><a href="#">Merkenavn</a></p>
             </header>
         
+            <section>
             <p>Pris: 5 195 kr inkl. mva.</p>
             <p>Farge: <span>Beige</span></p>
+            </section>
 
         
             <label for="størrelse"></label>

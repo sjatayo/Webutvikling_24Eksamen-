@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="no">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
@@ -8,9 +9,11 @@
     <link href="Ikoner/css/brands.css" rel="stylesheet">
     <link href="Ikoner/css/solid.css" rel="stylesheet">
     <link href="Ikoner/css/regular.css" rel="stylesheet">
+    
+</head>
 <body>
     <header class="site-header">
-  
+        
         <form action="search.html" method="get" class="search-bar">
             <label for="search-input" class="visually-hidden"></label>
             <input type="text" id="search-input" name="query" placeholder="søk her">
@@ -18,11 +21,11 @@
         </form>
     
         <!-- Navigasjonsmeny -->
-        <ul>
+        <ul class="nav-menu">
             <li><a href="index.html">Hjem</a></li>
-            <li><a href="index.html#produkter">Produkter</a></li>
+            <li><a href="#produkter">Produkter</a></li>
             <li><a href="index.html" class="Logo">LOGO</a></li>
-            <li><a href="index.html#kategori">Kategorier</a></li>
+            <li><a href="#kategori">Kategorier</a></li>
             <li><a href="#kontakt">Kontakt oss</a></li>
         </ul>
     
@@ -141,27 +144,34 @@
               
                 <h3>Leveringsadresse</h3>
         
+            <section class="fornavn">
                 <label for="fornavn">Fornavn:</label>
                 <input type="text" id="fornavn" name="fornavn" required>
-        
+            </section>
+            <section class="etternavn">
                 <label for="etternavn">Etternavn:</label>
                 <input type="text" id="etternavn" name="etternavn" required>
-        
+            </section>
+            <section class="gateadresse">
                 <label for="gateadresse">Gateadresse:</label>
                 <input type="text" id="gateadresse" name="gateadresse" required>
-        
+            </section>
+            <section class="postnummer">
                 <label for="postnummer1">Postnummer:</label>
                 <input type="number" id="postnummer1" name="postnummer1" required>
-        
+            </section>
+            <section class="poststed">
                 <label for="poststed1">Poststed:</label>
                 <input type="text" id="poststed1" name="poststed1" required>
-        
+            </section>
+            <section class="Kontaktinformasjon">
                 <label for="epost">Kontaktinformasjon E-post:</label>
                 <input type="email" id="epost" name="epost" required>
-        
+            </section>
+            <section class="Telefon">
                 <label for="telefon">Telefon:</label>
                 <input type="tel" id="telefon" name="telefon" required>
-        
+            </section>
                 <section class="do-buttons">
                     <button type="submit" class="save">Lagre</button>
                     <button type="reset" class="cancel">Avbryt</button>
